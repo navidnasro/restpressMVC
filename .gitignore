@@ -1,0 +1,5 @@
+storage/logs/log-*.json
+storage/app/**/*.json
+storage/app/**/*.img
+storage/app/**/*.png
+/vendor/
