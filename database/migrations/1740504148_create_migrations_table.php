@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\database\migrations;
+namespace restpressMVC\database\migrations;
 
-use sellerhub\core\database\migration\Migration;
+use restpressMVC\core\database\migration\Migration;
 
 return new class extends Migration
 {

@@ -15,9 +15,9 @@
  * Domain Path:       /languages
  */
 
-namespace stockPriceManager;
+namespace restpressMVC;
 
-use sellerhub\bootstraps\Plugin;
+use restpressMVC\bootstraps\Plugin;
 
 define('ROOT',plugin_dir_url(__FILE__));
 define('SiteUrl',get_site_url());

@@ -1,7 +1,7 @@
 <?php
 
-use sellerhub\app\models\User;
-use sellerhub\core\storage\Export;
+use restpressMVC\app\models\User;
+use restpressMVC\core\storage\Export;
 
 ?>
 <div class="wrap">

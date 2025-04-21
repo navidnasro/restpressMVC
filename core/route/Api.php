@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\core\route;
+namespace restpressMVC\core\route;
 
-use sellerhub\app\helpers\Utils;
+use restpressMVC\app\helpers\Utils;
 use WP_Error;
 
 defined('ABSPATH') || exit;

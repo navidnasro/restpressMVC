@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\core\database\migration;
+namespace restpressMVC\core\database\migration;
 
-use sellerhub\bootstraps\Environment;
+use restpressMVC\bootstraps\Environment;
 use wpdb;
 
 abstract class Migration

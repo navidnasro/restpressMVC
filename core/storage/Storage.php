@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\core\storage;
+namespace restpressMVC\core\storage;
 
-use sellerhub\bootstraps\Environment;
+use restpressMVC\bootstraps\Environment;
 
 class Storage
 {

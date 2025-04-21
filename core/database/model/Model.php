@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\core\database\model;
+namespace restpressMVC\core\database\model;
 
-use sellerhub\bootstraps\Environment;
+use restpressMVC\bootstraps\Environment;
 
 abstract class Model
 {

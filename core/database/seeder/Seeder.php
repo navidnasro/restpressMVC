@@ -1,11 +1,11 @@
 <?php
 
-namespace sellerhub\core\database\seeder;
+namespace restpressMVC\core\database\seeder;
 
 use Faker\Factory;
 use Faker\Generator;
 use wpdb;
-use sellerhub\bootstraps\Environment;
+use restpressMVC\bootstraps\Environment;
 
 abstract class Seeder
 {

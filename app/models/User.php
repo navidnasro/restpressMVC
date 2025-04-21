@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\app\models;
+namespace restpressMVC\app\models;
 
-use sellerhub\core\database\model\Model;
+use restpressMVC\core\database\model\Model;
 
 class User extends Model
 {

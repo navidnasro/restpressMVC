@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\core\database\seeder;
+namespace restpressMVC\core\database\seeder;
 
-use sellerhub\bootstraps\Environment;
+use restpressMVC\bootstraps\Environment;
 use wpdb;
 
 class SeederManager

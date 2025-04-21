@@ -1,11 +1,9 @@
 <?php
 
-namespace sellerhub\app\controllers\api;
+namespace restpressMVC\app\controllers\api;
 
-use sellerhub\app\helpers\Utils;
-use sellerhub\app\models\User;
-use sellerhub\app\models\VendorProof;
-use sellerhub\core\storage\Export;
+use restpressMVC\app\helpers\Utils;
+use restpressMVC\app\models\User;
 use WP_REST_Request;
 use WP_REST_Response;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace sellerhub\core\route;
+namespace restpressMVC\core\route;
 
 defined('ABSPATH') || exit;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\app\controllers\api;
+namespace restpressMVC\app\controllers\api;
 
-use sellerhub\app\helpers\Utils;
+use restpressMVC\app\helpers\Utils;
 use WP_REST_Request;
 use WP_REST_Response;
 

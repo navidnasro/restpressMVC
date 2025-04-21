@@ -1,6 +1,6 @@
 <?php
 
-namespace sellerhub\core\database\migration;
+namespace restpressMVC\core\database\migration;
 
 use wpdb;
 

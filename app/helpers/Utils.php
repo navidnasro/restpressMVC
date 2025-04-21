@@ -1,10 +1,9 @@
 <?php
 
-namespace sellerhub\app\helpers;
+namespace restpressMVC\app\helpers;
 
-use sellerhub\app\models\User;
-use sellerhub\bootstraps\Environment;
-use sellerhub\core\storage\Storage;
+use restpressMVC\app\models\User;
+use restpressMVC\bootstraps\Environment;
 
 class Utils
 {

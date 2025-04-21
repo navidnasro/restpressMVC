@@ -1,8 +1,8 @@
 <?php
 
-namespace sellerhub\database\seeders;
+namespace restpressMVC\database\seeders;
 
-use sellerhub\core\database\seeder\Seeder;
+use restpressMVC\core\database\seeder\Seeder;
 
 return new class extends Seeder
 {

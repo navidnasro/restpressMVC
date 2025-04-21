@@ -1,6 +1,6 @@
 <?php
 
-namespace sellerhub\bootstraps;
+namespace restpressMVC\bootstraps;
 
 defined('ABSPATH') || exit;
 

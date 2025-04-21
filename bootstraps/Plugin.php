@@ -1,13 +1,13 @@
 <?php
 
-namespace sellerhub\bootstraps;
+namespace restpressMVC\bootstraps;
 
-use sellerhub\app\controllers\api\GuaranteeController;
-use sellerhub\app\controllers\api\WalletController;
-use sellerhub\app\helpers\Utils;
-use sellerhub\app\models\VendorProof;
-use sellerhub\core\database\migration\MigrationManager;
-use sellerhub\core\database\seeder\SeederManager;
+use restpressMVC\app\controllers\api\GuaranteeController;
+use restpressMVC\app\controllers\api\WalletController;
+use restpressMVC\app\helpers\Utils;
+use restpressMVC\app\models\VendorProof;
+use restpressMVC\core\database\migration\MigrationManager;
+use restpressMVC\core\database\seeder\SeederManager;
 use WP_Query;
 use WP_REST_Request;
 
