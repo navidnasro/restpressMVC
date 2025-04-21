@@ -10,7 +10,7 @@ use restpressMVC\core\storage\Export;
     <!-- Buttons to filter users -->
     <form method="GET">
         <input type="hidden" name="show" value="customers-and-vendors">
-        <input type="hidden" name="page" value="seller_club_dashboard">
+        <input type="hidden" name="page" value="club_dashboard">
         <button type="submit" name="user_type" value="vendor" class="button button-primary">
             فروشنده ها
         </button>
@@ -39,18 +39,6 @@ use restpressMVC\core\storage\Export;
     {
         $headers = ['نام و نام خانوادگی', 'شماره تماس', 'شهر', 'کدملی'];
 
-        if ($userType == 'vendor')
-        {
-            $headers[] = 'تصاویر احراز هویت';
-            $headers[] = 'نام و نام خانوادگی مشتری';
-            $headers[] = 'شماره تماس مشتری';
-            $headers[] = 'مدل دستگاه';
-        }
-
-        elseif ($userType == 'customer')
-        {
-            $headers[] = 'مدل دستگاه';
-        }
         ?>
         <table class="wp-list-table widefat fixed striped users">
             <thead>
@@ -72,166 +60,23 @@ use restpressMVC\core\storage\Export;
                 {
                     $products = $user->getProducts();
 
-                    if ($userType == 'customer')
-                    {
-                        if (!empty($products))
-                        {
-                            foreach ($products as $product)
-                            {
-                                $data[] = [
-                                    $user->name,
-                                    $user->phone_number,
-                                    $user->city,
-                                    $user->national_id,
-                                    $product->name
-                                ];
+                    $data[] = [
+                        $user->name,
+                        $user->phone_number,
+                        $user->city,
+                        $user->national_id,
+                        ''
+                    ];
 
-                                ?>
-                                <tr>
-                                    <td><?php echo esc_html($user->name); ?></td>
-                                    <td><?php echo esc_html($user->phone_number); ?></td>
-                                    <td><?php echo esc_html($user->city); ?></td>
-                                    <td><?php echo esc_html($user->national_id); ?></td>
-                                    <td><?php echo esc_html($product->name); ?></td>
-                                </tr>
-                                <?php
-                            }
-                        }
-
-                        else
-                        {
-                            $data[] = [
-                                $user->name,
-                                $user->phone_number,
-                                $user->city,
-                                $user->national_id,
-                                ''
-                            ];
-
-                            ?>
-                            <tr>
-                                <td><?php echo esc_html($user->name); ?></td>
-                                <td><?php echo esc_html($user->phone_number); ?></td>
-                                <td><?php echo esc_html($user->city); ?></td>
-                                <td><?php echo esc_html($user->national_id); ?></td>
-                                <td></td>
-                            </tr>
-                            <?php
-                        }
-                    }
-
-                    else if ($userType == 'vendor')
-                    {
-                        $customers = $user->getCustomers();
-
-                        if ($customers)
-                        {
-                            foreach ($customers as $customer)
-                            {
-                                $customerProducts = $user->getProductsSoldTo($customer->id);
-
-                                if (!empty($customerProducts))
-                                {
-                                    foreach ($customerProducts as $product)
-                                    {
-                                        $data[] = [
-                                            $user->name,
-                                            $user->phone_number,
-                                            $user->city,
-                                            $user->national_id,
-                                            $customer->name,
-                                            $customer->phone_number,
-                                            $product->name
-                                        ];
-
-                                        ?>
-                                        <tr>
-                                            <td><?php echo esc_html($user->name); ?></td>
-                                            <td><?php echo esc_html($user->phone_number); ?></td>
-                                            <td><?php echo esc_html($user->city); ?></td>
-                                            <td><?php echo esc_html($user->national_id); ?></td>
-                                            <td><span class="vendor-proof-pics" data-id="<?php echo $user->id ?>">مشاهده تصاویر</span></td>
-                                            <td><?php echo esc_html($customer->name); ?></td>
-                                            <td><?php echo esc_html($customer->phone_number); ?></td>
-                                            <td><?php echo esc_html($product->name); ?></td>
-                                        </tr>
-                                        <?php
-                                    }
-                                }
-
-                                else
-                                {
-                                    $data[] = [
-                                        $user->name,
-                                        $user->phone_number,
-                                        $user->city,
-                                        $user->national_id,
-                                        $customer->name,
-                                        $customer->phone_number,
-                                        ''
-                                    ];
-
-                                    ?>
-                                    <tr>
-                                        <td><?php echo esc_html($user->name); ?></td>
-                                        <td><?php echo esc_html($user->phone_number); ?></td>
-                                        <td><?php echo esc_html($user->city); ?></td>
-                                        <td><?php echo esc_html($user->national_id); ?></td>
-                                        <td><span class="vendor-proof-pics" data-id="<?php echo $user->id ?>">مشاهده تصاویر</span></td>
-                                        <td><?php echo esc_html($customer->name); ?></td>
-                                        <td><?php echo esc_html($customer->phone_number); ?></td>
-                                        <td></td>
-                                    </tr>
-                                    <?php
-                                }
-                            }
-                        }
-
-                        else
-                        {
-                            $data[] = [
-                                $user->name,
-                                $user->phone_number,
-                                $user->city,
-                                $user->national_id,
-                                '',
-                                '',
-                                ''
-                            ];
-
-                            ?>
-                            <tr>
-                                <td><?php echo esc_html($user->name); ?></td>
-                                <td><?php echo esc_html($user->phone_number); ?></td>
-                                <td><?php echo esc_html($user->city); ?></td>
-                                <td><?php echo esc_html($user->national_id); ?></td>
-                                <td><span class="vendor-proof-pics" data-id="<?php echo $user->id ?>">مشاهده تصاویر</span></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                            <div class="vendor-proof-pics-popup-bg" data-id="<?php echo $user->id ?>">
-                                <div class="vendor-proof-pics-popup-bg-wrap">
-                                    <div class="vendor-proof-pics-popup">
-                                        <span class="vendor-proof-pics-popup-close">&times;</span>
-                                        <?php
-                                        $vendorProofImages = $user->getProofs();
-
-                                        foreach ($vendorProofImages as $image)
-                                        {
-                                            ?>
-                                            <div><img src="<?php echo $image->url ?>" alt="<?php echo $image->name ?>"></div>
-                                            <?php
-                                        }
-                                        ?>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php
-                    }
+                    ?>
+                    <tr>
+                        <td><?php echo esc_html($user->name); ?></td>
+                        <td><?php echo esc_html($user->phone_number); ?></td>
+                        <td><?php echo esc_html($user->city); ?></td>
+                        <td><?php echo esc_html($user->national_id); ?></td>
+                        <td></td>
+                    </tr>
+                    <?php
                 }
                 ?>
             </tbody>

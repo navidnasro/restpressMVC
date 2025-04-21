@@ -2,6 +2,7 @@
 
 namespace restpressMVC\core\database\migration;
 
+use restpressMVC\bootstraps\Environment;
 use wpdb;
 
 class MigrationManager
@@ -14,7 +15,7 @@ class MigrationManager
         global $wpdb;
 
         $this->wpdb = $wpdb;
-        $this->migrationsTable = $wpdb->prefix . 'sellerclub_migrations';
+        $this->migrationsTable = $wpdb->prefix.Environment::TablePreFix . 'migrations';
     }
 
     private function getExecutedMigrations(): array

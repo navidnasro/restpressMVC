@@ -42,7 +42,7 @@ class Plugin
 //        add_action('rest_api_init', [$this,'enableCors']);
 
         register_activation_hook(PluginFile, [$this,'runMigrations']);
-//        register_deactivation_hook(PluginFile, [$this,'rollbackMigrations']);
+        register_deactivation_hook(PluginFile, [$this,'rollbackMigrations']);
     }
 
     public function runMigrations(): void
