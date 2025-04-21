@@ -39,7 +39,7 @@ class Plugin
     {
         add_action('admin_menu',[$this,'addMenu']);
         add_action('admin_notices', [$this,'showNotices']);
-        add_action('rest_api_init', [$this,'enableCors']);
+//        add_action('rest_api_init', [$this,'enableCors']);
 
         register_activation_hook(PluginFile, [$this,'runMigrations']);
 //        register_deactivation_hook(PluginFile, [$this,'rollbackMigrations']);
