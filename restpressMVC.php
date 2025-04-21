@@ -3,7 +3,7 @@
  * Plugin Name:       restpressMVC
  * Plugin URI:        https://github.com/navidnasro/restpressMVC
  * Description:       manages stock and price of products
- * Version:           1.0.2
+ * Version:           1.0.3
  * Requires at least: 6.4
  * Requires PHP:      8.1
  * Author:            NavidNasro
