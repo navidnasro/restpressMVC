@@ -1,17 +1,17 @@
 <?php
 /*
- * Plugin Name:       Seller Hub
- * Plugin URI:        https://github.com/navidnasro
+ * Plugin Name:       restpressMVC
+ * Plugin URI:        https://github.com/navidnasro/restpressMVC
  * Description:       manages stock and price of products
- * Version:           3.3.2
+ * Version:           1.0.0
  * Requires at least: 6.4
- * Requires PHP:      7.4
+ * Requires PHP:      8.1
  * Author:            NavidNasro
  * Author URI:        https://github.com/navidnasro
  * License:           MIT
  * License URI:       https://mit-license.org/
- * Update URI:        https://github.com/navidnasro
- * Text Domain:       seller hub
+ * Update URI:        https://github.com/navidnasro/restpressMVC
+ * Text Domain:       restpressMVC
  * Domain Path:       /languages
  */
 

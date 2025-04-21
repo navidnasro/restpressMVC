@@ -3,12 +3,8 @@
 namespace restpressMVC\route;
 
 // defining routes
-use restpressMVC\app\controllers\api\AuthController;
-use restpressMVC\app\controllers\api\GuaranteeController;
-use restpressMVC\app\controllers\api\ProductController;
 use restpressMVC\app\controllers\api\TokenController;
 use restpressMVC\app\controllers\api\UserController;
-use restpressMVC\app\controllers\api\WalletController;
 use restpressMVC\core\route\Api;
 
 Api::register('POST','/user/create',[new UserController(),'create']);
